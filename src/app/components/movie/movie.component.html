@@ -1,0 +1,15 @@
+<div routerLink="/movie/{{movie?.id}}"  [state]="{ movie: movie }" class="card w-96 bg-base-100 shadow-xl">
+    <figure><img  [src]="movie?.img" alt="Shoes" /></figure>
+    <div class="card-body">
+      <h2 class="card-title">
+        {{movie?.title}}
+        <!-- <div class="badge badge-secondary">NEW</div> -->
+      </h2>
+      <p>{{movie?.description}}</p>
+      <div *ngFor="let gender of movie?.gender">
+        <div class="card-actions justify-end">
+          <div class="badge badge-outline">{{gender.name}}</div> 
+        </div>
+      </div>
+    </div>
+  </div>

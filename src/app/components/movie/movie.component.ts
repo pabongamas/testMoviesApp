@@ -8,4 +8,6 @@ import { Movie } from 'src/app/models/movie.model';
 })
 export class MovieComponent {
   @Input() movie: Movie | undefined;
+  @Input() index:number=0;
+
 }

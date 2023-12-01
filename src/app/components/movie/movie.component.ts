@@ -7,7 +7,11 @@ import { Movie } from 'src/app/models/movie.model';
   styleUrls: ['./movie.component.css']
 })
 export class MovieComponent {
-  @Input() movie: Movie | undefined;
+  @Input() movie: Movie|undefined;
   @Input() index:number=0;
+
+  stateWatchList(id:string|undefined){
+    console.log(id);
+  }
 
 }

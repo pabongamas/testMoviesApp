@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 import { HomeComponent } from './components/home/home.component';
+import { MyWatchListComponent } from './components/my-watch-list/my-watch-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
     MovieDetailComponent,
-    HomeComponent
+    HomeComponent,
+    MyWatchListComponent
   ],
   imports: [
     BrowserModule,

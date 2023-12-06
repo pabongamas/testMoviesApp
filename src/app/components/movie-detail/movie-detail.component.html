@@ -3,9 +3,23 @@
       <img [src]="movie?.img" class="max-w-sm rounded-lg shadow-2xl" />
       <div>
         <h1 class="text-5xl font-bold">{{movie?.title}}</h1>
+        <div class="flex items-center">
+          <p>⭐ {{ movie?.rating }}</p>
+        <p class="p-3">{{movie?.releaseDate | date}} - {{movie?.duration}}</p> 
+        </div>
+        <div class="flex gap-2" *ngIf="movie?.gender != undefined">
+          <div *ngFor="let gender of movie?.gender">
+            <div class="card-actions justify-end">
+              <div class="badge badge-outline">{{ gender.name }}</div>
+            </div>
+          </div>
+        </div>
         <p class="py-6">{{movie?.description}}</p>
-        <div class="flex justify-center">
-            <iframe width="560" height="315" [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
+        <div *ngIf="movieInWatchList" class="flex flex-col text-center justify-center items-center">
+            <iframe class="w-full" height="315" [src]="videoUrl" frameborder="0" allowfullscreen></iframe>
+            <div  class="p-4 mt-2 bg-primary w-3/6 flex justify-center ">
+              <h2 class="text-slate-600">In WatchList</h2>
+            </div>
           </div>
       </div>
     </div>
